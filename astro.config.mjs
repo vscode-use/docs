@@ -31,7 +31,7 @@ export default defineConfig({
 							}
 						},
 						{
-							label: 'Example', link: '/guides/example/', translations: {
+							label: 'Examples', link: '/guides/example/', translations: {
 								'zh-cn': '示例指南',
 							}
 						},
