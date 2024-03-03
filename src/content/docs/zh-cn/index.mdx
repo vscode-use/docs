@@ -1,0 +1,37 @@
+---
+title: 欢迎来到 vscode use
+description: vscode use 针对 vscode api 进行了二次的封装，提供了大量精简实用的函数，并且让函数名更贴近实际意义，就如 vscode 中的 lodash。
+template: splash
+hero:
+  tagline: vscode use 针对 vscode api 进行了二次的封装，提供了大量精简实用的函数，并且让函数名更贴近实际意义，就如 vscode 中的 lodash。
+  image:
+    file: ../../../assets/houston.webp
+  actions:
+    - text: 开始使用
+      link: /guides/start/
+      icon: right-arrow
+      variant: primary
+    - text: 在 GitHub 上查看
+      icon: external
+      link: https://github.com/vscode-use/docs
+---
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+
+<CardGrid stagger>
+	<Card title="反馈" icon="information">
+		提供一些好的[建议](https://github.com/vscode-use/utils/issues) ，或者反馈一些[问题](https://github.com/vscode-use/utils/issues)。
+	</Card>
+	<Card title="treeprovider" icon="rocket">
+		[treeprovider](https://github.com/vscode-use/treeprovider) 提供了快速创建侧边栏树的方法，如果你希望完全自定义你的树，可以使用 [registerwebview
+](https://github.com/vscode-use/registerwebview),他提供了纯 webview 的侧边栏的创建方法。
+	</Card>
+	<Card title="createwebview" icon="rocket">
+		[createwebview](https://github.com/vscode-use/createwebview) 提供了在 vscode 的任意位置创建 webview 的方法。
+	</Card>
+  <Card title="赞助" icon="seti:gulp">
+		[请我喝一杯 ☕️](https://github.com/Simon-He95/sponsor)
+	</Card>
+</CardGrid>

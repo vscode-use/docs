@@ -1,319 +1,318 @@
 ---
-title: 📖 示例
-description: 展示一些常用的示例
+title: 📖 Examples
+description: Show some common examples
 ---
 
-
-  ### 注册指令，需要在 package.json 中声明 右下角弹出提示
+  ### The registration instruction needs to be declared in package.json. A prompt pops up in the lower right corner.
   ```
   registerCommand('vscode-use.hello', () => {
     message.info('Hello World!')
   })
   ```
 
-  ### 注册指令，需要在 package.json 中声明 右下角弹出错误提示
+  ### The registration instruction needs to be declared in package.json. An error prompt pops up in the lower right corner.
   ```
   registerCommand('vscode-use.error', () => {
     message.error('Hello World!')
   })
   ```
 
-  ### 注册指令，需要在 package.json 中声明 打开百度
+  ### Registration instructions need to declare in package.json to open Baidu
   ```
   registerCommand('vscode-use.openExternalUrl', () => {
     openExternalUrl('http://www.baidu.com')
   })
   ```
 
-  ### 获取当前语言
+  ### Get the current language
   ```
   const isZh = getLocale().includes('zh')
   message.info(`当前语言：${isZh ? '中文' : '英文'}`)
   ```
 
-  ### 监听 切换活动的文本编辑器
+  ### Monitor and switch the active text editor
   ```
   addEventListener('activeText-change', (e) => {})
   ```
 
-  ### 监听 登录状态变化
+  ### Monitor login status changes
   ```
   addEventListener('auth-change', (e) => {})
   ```
 
-  ### 监听 配置变化（包括：插件配置、用户配置、工作区配置）
+  ### Monitoring configuration changes (including: plug-in configuration, user configuration, workspace configuration)
   ```
   addEventListener('config-change', (e) => {})
   ```
 
-  ### 监听 编辑器可见性变化
+  ### Monitor editor visibility changes
   ```
   addEventListener('editor-visible', (e) => {})
   ```
 
-  ### 监听 文件创建
+  ### Monitor file creation
   ```
   addEventListener('file-create', (e) => {})
   ```
 
-  ### 监听 文件删除
+  ### Monitoring file deletion
   ```
   addEventListener('file-delete', (e) => {})
   ```
 
-  ### 监听 文件夹创建和删除
+  ### Monitor folder creation and deletion
   ```
   addEventListener('folder-change', (e) => {})
   ```
 
-  ### 监听 文件重命名
+  ### Listen to file renaming
   ```
   addEventListener('rename', (e) => {})
   ```
 
-  ### 监听 选中内容变化
+  ### Monitor the changes of selected content
   ```
   addEventListener('selection-change', (e) => {})
   ```
 
-  ### 监听 终端变化
+  ### Monitor terminal changes
   ```
   addEventListener('terminal-change', (e) => {})
   ```
 
-  ### 监听 终端关闭
+  ### Monitoring terminal is closed
   ```
   addEventListener('terminal-close', (e) => {})
   ```
 
-  ### 监听 终端创建
+  ### Monitoring terminal creation
   ```
   addEventListener('terminal-open', (e) => {})
   ```
 
-  ### 监听 文本修改
+  ### Monitor text modifications
   ```
   addEventListener('text-change', (e) => {})
   ```
 
-  ### 监听 新开文本
+  ### Monitor new text
   ```
   addEventListener('text-open', (e) => {})
   ```
 
-  ### 监听 文本保存
+  ### Monitor text saving
   ```
   addEventListener('text-save', (e) => {})
   ```
-
-  ### 监听 文本可见性变化
-  ```
-  addEventListener('text-visible-change', (e) => {})
-  ```
-
-  ### 监听 主题变化
-  ```
-  addEventListener('theme-change', (e) => {})
-  ```
-
-  ### 跳到某个文件的某一行
-  ```
-  jumpToLine(10, 'path/Uri')
-  ```
-
-  ### 折叠起始行和结束行之间的所有行
-  ```
-  onFold([
-    createRange([1, 0], [5, 0]),
-    createRange([5, 0], [10, 0])
-  ])
-  ```
-
-  ### 展开起始行和结束行之间的所有行
-  ```
-  unFold([
-    createRange([1, 0], [5, 0]),
-    createRange([5, 0], [10, 0])
-  ])
-  ```
-
-  ### 更新文本
-  ```
-  updateText(edit=>{
-  // 在第一行插入文本
-  edit.insert(new vscode.Position(0, 0), 'Hello World!')
-
-  // 删除第一行的前5个字符
-  edit.delete(new vscode.Range(new vscode.Position(0, 0), new vscode.Position(0, 5)))
-
-  // 将第一行的前5个字符替换为 Hello World!
-  edit.replace(new vscode.Range(new vscode.Position(0, 0), new vscode.Position(0, 5)), 'Hello World!')
-  })
-  ```
-
-  ### 获取当前激活的编辑器文本
-  ```
-  const activeText = getActiveText()
-  ```
-
-  ### 获取某一行的文本
-  ```
-  const lineText = getLineText(0)
-  ```
-
-  ### 读取 config
-  ```
-   const mode1 = getConfiguration('vscode-use').get('mode')
-   const mode2 = getConfiguration('vscode-use.mode')
-  ```
-
-  ### 更新 config
-  ```
-  setConfiguration('vscode-use.mode', 'dev')
-  ```
-
-  ### 创建终端
-  ```
-  createTerminal('test')
-  ```
-
-  ### 创建底部栏
-  ```
-  createBottomBar({
-    position: 'left',
-    text: '我是底部栏',
-    color: '#fff',
-    backgroundColor: '#000',
-  })
-  ```
-
-  ### 根据 offset 获取位置
-  ```
-  const pos = getPosition(100)
-  ```
-
-  ### 获取 copy 的内容
-  ```
-  getCopyText().then(text=>{})
-  ```
-
-  ### 往剪贴板写入内容
-  ```
-  setCopyText('Hello World!')
-  ```
-
-  ### 获取当前激活文本的路径
-  ```
-  const currentFileUrl = getCurrentFileUrl()
-  ```
-
-  ### 设置选中内容
-  ```
-  setSelection([0, 0], [0, 5])
+### Monitor text visibility changes
+   ```
+   addEventListener('text-visible-change', (e) => {})
    ```
 
-  ### 设置多选
+   ### Monitor theme changes
+   ```
+   addEventListener('theme-change', (e) => {})
+   ```
+
+   ### Jump to a certain line of a file
+   ```
+   jumpToLine(10, 'path/Uri')
+   ```
+
+   ### Collapse all lines between the start line and the end line
+   ```
+   onFold([
+     createRange([1, 0], [5, 0]),
+     createRange([5, 0], [10, 0])
+   ])
+   ```
+
+   ### Expand all lines between the start line and the end line
+   ```
+   unFold([
+     createRange([1, 0], [5, 0]),
+     createRange([5, 0], [10, 0])
+   ])
+   ```
+
+   ### Update text
+   ```
+   updateText(edit=>{
+   //Insert text in the first line
+   edit.insert(new vscode.Position(0, 0), 'Hello World!')
+
+   // Delete the first 5 characters of the first line
+   edit.delete(new vscode.Range(new vscode.Position(0, 0), new vscode.Position(0, 5)))
+
+   // Replace the first 5 characters of the first line with Hello World!
+   edit.replace(new vscode.Range(new vscode.Position(0, 0), new vscode.Position(0, 5)), 'Hello World!')
+   })
+   ```
+
+   ### Get the currently active editor text
+   ```
+   const activeText = getActiveText()
+   ```
+
+   ### Get the text of a certain line
+   ```
+   const lineText = getLineText(0)
+   ```
+
+   ### Read config
+   ```
+   const mode1 = getConfiguration('vscode-use').get('mode')
+   const mode2 = getConfiguration('vscode-use.mode')
+   ```
+
+   ### Update config
+   ```
+   setConfiguration('vscode-use.mode', 'dev')
+   ```
+
+   ### Create terminal
+   ```
+   createTerminal('test')
+   ```
+
+   ### Create bottom bar
+   ```
+   createBottomBar({
+     position: 'left',
+     text: 'I am the bottom bar',
+     color: '#fff',
+     backgroundColor: '#000',
+   })
+   ```
+
+   ### Get the position based on offset
+   ```
+   const pos = getPosition(100)
+   ```
+
+   ### Get the content of the copy
+   ```
+   getCopyText().then(text=>{})
+   ```
+
+   ### Write content to the clipboard
+   ```
+   setCopyText('Hello World!')
+   ```
+
+   ### Get the path of the currently active text
+   ```
+   const currentFileUrl = getCurrentFileUrl()
+   ```
+
+   ### Set selected content
   ```
-  setSelections([{
-    start: [0, 0],
-    end: [0, 5],
-    position: 'left' // 控制光标位置
-  }, {
-    start: [1, 0],
-    end: [1, 5],
-    position: 'right'
-  }])
+   setSelection([0, 0], [0, 5])
   ```
 
-  ###  监听文件变化
-  ```
-  watchFiles('filepath', (e) => {})
-  ```
+   ### Set multiple selections
+   ```
+   setSelections([{
+     start: [0, 0],
+     end: [0, 5],
+     position: 'left' // Control cursor position
+   }, {
+     start: [1, 0],
+     end: [1, 5],
+     position: 'right'
+   }])
+   ```
 
-  ### 创建进度条
-  ```
-  createProgress({
-    title: '进度条',
-    async done(report) {
-      report({
-        message: '进度条完成 10%',
-        increment: 10
-      })
-      setTimeout(() => {
-        report({
-          message: '进度条完成 50',
-          increment: 50
-        })
-      })
-    }
-  })
-  ```
+   ### Monitor file changes
+   ```
+   watchFiles('filepath', (e) => {})
+   ```
 
-  ### 创建选择框
-  ```
-  createSelect(['vue','react','svelte','solid']).then((res)=>{})
-  ```
+   ### Create a progress bar
+   ```
+   createProgress({
+     title: 'Progress Bar',
+     async done(report) {
+       report({
+         message: 'Progress bar 10% completed',
+         increment: 10
+       })
+       setTimeout(() => {
+         report({
+           message: 'Progress bar completed 50',
+           increment: 50
+         })
+       })
+     }
+   })
+   ```
 
-  ### 监听 hover 元素的事件
-  ```
-  registerHoverProvider('vue', (e) => {})
-  ```
+   ### Create a selection box
+   ```
+   createSelect(['vue','react','svelte','solid']).then((res)=>{})
+   ```
 
-  ### 监听按下 option 键时控制点击跳转位置
-  ```
-  registerDefinitionProvider('vue', (e) => {})
-  ```
+   ### Listen to the event of hover element
+   ```
+   registerHoverProvider('vue', (e) => {})
+   ```
 
-  ### 获取主题相关 api
-  ```
-  const { getCurrentTheme, getAllTheme, setTheme, } = useTheme()
-  ```
+   ### Monitor the click jump position when the option key is pressed.
+   ```
+   registerDefinitionProvider('vue', (e) => {})
+   ```
 
-  ### 获取当前激活文本的语言
-  ```
-  const language = getActiveTextEditorLanguageId() // vue
-  ```
+   ### Get topic-related APIs
+   ```
+   const { getCurrentTheme, getAllTheme, setTheme, } = useTheme()
+   ```
 
-  ### 重命名文件
-  ```
-  rename('url', 'newUrl')
-  ```
+   ### Get the language of the currently active text
+   ```
+   const language = getActiveTextEditorLanguageId() // vue
+   ```
 
-  ### nextTick，一些针对文件变化后的操作，需要等待文件变化后再执行
-  ```
-   nextTick(()=>{})
-  ```
+   ### Rename file
+   ```
+   rename('url', 'newUrl')
+   ```
 
-  ### 添加样式
-  ```
-  setStyle(createStyle({
-    backgroundColor: 'yellow',
-    border: '1px solid red'
-  }), createRange([0, 0], [0, 10]))
-  ```
-  ### 创建输入框
-  ```
-  createInput({
-    title: '我是输入框',
-    placeHolder: '请输入内容',
-    value: ''
-  })
-  ```
+   ### nextTick, some operations after file changes need to wait for the file to change before executing
+   ```
+    nextTick(()=>{})
+   ```
 
+   ### Add style
+   ```
+   setStyle(createStyle({
+     backgroundColor: 'yellow',
+     border: '1px solid red'
+   }), createRange([0, 0], [0, 10]))
+   ```
 
-  ### 获取当前激活的编辑器
+   ### Create input box
+
+   ```
+   createInput({
+     title: 'I am an input box',
+     placeHolder: 'Please enter content',
+     value: ''
+   })
+   ```
+
+  ### getActiveTextEditor
 
   ```
   const activeTextEditor = getActiveTextEditor()
   ```
 
-  ### 获取 position 位置的关键词
+  ### getKeyWords
 
   ```
   const keyWords = getKeyWords(position)
   ```
-  
-  ### 设置 MarkdownString 的点击 command 参数
+
+  ### Set the click command parameter of MarkdownString
 
   ```
   const md = new vscode.MarkdownString()
@@ -325,6 +324,6 @@ description: 展示一些常用的示例
 
   ### getOffsetFromPosition
   ```
-  const offset = getOffsetFromPosition(position) // 获取当前文本，位置的offset
-  const offset = getOffsetFromPosition(position,code) // 获取指定code，位置的offset
+  const offset = getOffsetFromPosition(position) // Get the offset of the current text and location
+  const offset = getOffsetFromPosition(position,code) // Get the offset of the specified code and position
   ```

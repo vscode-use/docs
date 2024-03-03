@@ -1,159 +1,108 @@
 ---
-title: 📝 接口
-description: 列举了所有的接口
+title: 📝 Api
+description: All the interfaces are listed.
 ---
 
 
-
 ### registerCommand
-- ***注册指令***
-
+- ***Registration instructions***
 ### executeCommand
-- ***触发指令***
-
+- ***Trigger instructions***
 ### getConfiguration
-- ***获取 workspace configuration***
-
-### message
-- {type:'info'|'error',message:string,buttons:['ok']} ***弹出消息***
-
+- ***get workspace configuration***
+### messag
+- ***pe:'info'|'error',message:string,buttons:['ok']}： ***Pop up message***
 ### openFile
-- ***打开某一个文件***
-
+- ***Open a file.***
 ### addEventListener
-- ***监听vscode中的文件切换、终端、内容变更、新增、删除等事件***
-
+- ***Listen to file switching, terminal, content change, add, delete and other events in vscode***
 ### createTerminal
-- ***快速创建一个终端***
-
+- ***Quickly create a terminal***
 ### createCompletionItem
-- ***生成registerCompletionItemProvider的提示内容***
-
+- ***Generate the prompt content of registerCompletionItemProvider***
 ### registerCompletionItemProvider
-- ***根据输入生成对应的提示***
-
+- ***Generate the corresponding prompt according to the input***
 ### isDark
-- ***判断当前vscode主题是否是dark***
-
+- ***Determine whether the current vscode theme is dark***
 ### getSelection
-- ***获取当前鼠标所在行的信息***
-
+- ***Get the information of the line where the current mouse is located***
 ### getActiveTextEditorLanguageId
-- ***获取当前文件的一个类型 javascriptreact | typescriptreact | vue 等***
-
+- ***Get a type of the current file javascriptreact | typescriptreact | vue, etc.***
 ### createProgress
-- ***创建一个vscode中的执行进度条***
-
+- ***Create an execution progress bar in vscode***
 ### registerInlayHintsProvider
-- ***给出一个类似copilot的hint提示***
-
+- ***Give a hint similar to copilot.***
 ### getCopyText
-- ***读取粘贴板中的内容***
-
+- ***Read the pasteboard Content.***
 ### setCopyText
-- 往粘贴板中塞入内容***
-
+- ***Plug the content into the pasteboard.***
 ### updateText
-- ***修改文本内容***
-
+- ***Modify the text content***
 ### jumpToLine
-- ***打开文件并跳转到某一行***
-
+- ***Open a file and jump to a certain line***
 ### createBottomBar
-- ***创建底部栏按钮***
-
+- ***Create the bottom bar button***
 ### nextTick
-- ***修改文本内容更新后的回调***
-
+- ***Create the bottom bar button***
 ### createSquare
-- ***创建一个方形小块***
-
+- ***Create a square block***
 ### watchFiles
-- ***监听文件内容和删除的变化***
-
+- ***Monitor changes in file content and deletion***
 ### createEvents
-- ***用于订阅事件通信的工具***
-
+- ***Tools for subscribing to event communication***
 ### getActiveText
-- ***获取到当前激活tab的文本内容***
-
+- ***Get the text content of the current activation tab***
 ### fold
-- ***折叠代码***
-
+- ***fold code***
 ### unFold
-- ***展开代码***
-
+- ***unfold code***
 ### registerDefinitionProvider
-- ***提供了 option+click，实现快速跳转的功能***
-
+- ***It provides option + click to achieve the function of fast jump.***
 ### registerHoverProvider
-- ***为鼠标悬停提供回调***
-
-### registerCodeActionsProvider
-- ***注册代码动作提供程序***
-
+- ***Provide a callback for mouse hover***
+### registerCodeActionsProvide
+- ***Registered Code Action Provider***
 ### openExternalUrl
-- ***在浏览器中打开外部网址***
-
+- ***Open the external url in the browser***
 ### getLineText
-- ***获取某一行的文本***
-
+- ***Get the text of a certain line***
 ### useTheme
-- ***主题信息获取和操作***
-
+- ***Theme Configuration and Operatation***
 ### isInPosition
-- ***判断一块区域是否是另一块的子区域***
-
+- ***Determine whether one area is a sub-area of another***
 ### getCurrentFileUrl
-- ***获取当前激活文件的路径***
-
+- ***Get the path of the current activation file***
 ### createInput
-- ***创建一个输入框***
-
+- ***Create an input box***
 ### getLocale
-- ***获取本地的语言环境***
-
+- ***Get the local language environment***
 ### rename
-- ***快速给文件重命名***
-
-### createDefinitionLocation
-- ***创建按下 option 后左键点击后的跳转地址数据***
-
-### setStyle
-- ***给某一块区域增加样式***
-
-### createStyle
-- ***创建样式***
-
-### getActiveTextEditor
-- ***获取当前激活的编辑器***
-
-### getKeyWords
-- ***获取 position 位置处的关键词***
-
-### setCommandParams
-- ***设置 MarkdownString 的点击 command 参数***
-
-### getOffsetFromPosition
-- ***根据 position 计算 offset***
-
-### getRootPath
-- ***获取项目根目录路径***
-
-### registerCodeLensProvider
-- ***注册文本中头部的文字按钮并绑上事件***
-
-### createCodeLens
-- ***快速创建 provideCodeLenses 中的 item***
-
-### saveFile
-- ***保存文件***
-
+- ***Quickly rename files***
+### createDefinitionLocatio
+- ***Create jump address data after left-clicking after pressing option***
+### setStyl
+- ***Add style to a certain area***
+### createStye
+- ***Create Style***
+### getActiveTextEdito
+- ***Get the currently activated editor***
+### getKeyWord
+- ***Get the keywords at the position***
+### setCommandParam
+- ***Set the click command parameter of MarkdownString***
+### getOffsetFromPositio
+- ***Get the offset from position***
+### getRootPat
+- ***Get the root directory path of the project***
+### registerCodeLensProvide
+- ***Register the text button at the head of the text and tie the event.***
+### createCodeLen
+- ***Quickly create items in provideCodeLenses***
+### saveFil
+- ***Save the file***
+### createStyleAnimaion
+- ***Add style animation***
 ### createStyleAnimation
-- ***添加样式动画***
-
-### createStyleAnimations
-- ***添加样式动画组***
-
-### getWordRangeAtPosition
-- ***获取所在位置的关键词的区域***
+- ***Add style animation group***
+### getWordRangeAtPositio
+- ***Get the area of ​​keywords for your location***
