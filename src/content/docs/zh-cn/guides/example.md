@@ -42,6 +42,16 @@ description: 展示一些常用的示例
   })
   ```
 
+  ### 执行指令，需要在 package.json 中声明
+  ```
+  executeCommand('vscode-use.openExternalUrl', ...params)
+
+  // 执行多条指令
+  executeCommands([
+    ['vscode-use.openExternalUrl', ...params]
+  ])
+  ```
+
   ### 获取当前语言
   ```
   const isZh = getLocale().includes('zh')

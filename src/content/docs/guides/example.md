@@ -3,6 +3,17 @@ title: 📖 Examples
 description: Show some common examples
 ---
 
+  ### Register Extension
+  ```
+  export = createExtension((context) => {
+    const disposals = []
+
+    return disposals
+  }, () => {
+
+  })
+  ```
+
   ### The registration instruction needs to be declared in package.json. A prompt pops up in the lower right corner.
   ```
   registerCommand('vscode-use.hello', () => {
@@ -15,6 +26,13 @@ description: Show some common examples
   registerCommand('vscode-use.error', () => {
     message.error('Hello World!')
   })
+
+  // Register multiple instructions
+  registerCommands([
+    'vscode-use.error', () => {
+      message.error('Hello World!')
+    }
+  ])
   ```
 
   ### Registration instructions need to declare in package.json to open Baidu
@@ -22,6 +40,16 @@ description: Show some common examples
   registerCommand('vscode-use.openExternalUrl', () => {
     openExternalUrl('http://www.baidu.com')
   })
+  ```
+
+  ### The execution instructions need to be declared in package.json
+  ```
+  executeCommand('vscode-use.openExternalUrl', ...params)
+
+  // Execute multiple instructions
+  executeCommands([
+    ['vscode-use.openExternalUrl', ...params]
+  ])
   ```
 
   ### Get the current language
@@ -33,6 +61,11 @@ description: Show some common examples
   ### Monitor and switch the active text editor
   ```
   addEventListener('activeText-change', (e) => {})
+
+  // Monitor multiple events
+  addEventListeners([
+    'activeText-change', (e) => {}
+  ])
   ```
 
   ### Monitor login status changes
