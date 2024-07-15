@@ -3,12 +3,20 @@ title: 📝 接口
 description: 列举了所有的接口
 ---
 
+### createExtension
+- ***注册插件***
 
 ### registerCommand
 - ***注册指令***
 
+### registerCommands
+- ***注册多条指令***
+
 ### executeCommand
 - ***触发指令***
+
+### executeCommands
+- ***触发多条指令***
 
 ### getConfiguration
 - ***获取 workspace configuration***
@@ -20,13 +28,16 @@ description: 列举了所有的接口
 - ***打开某一个文件***
 
 ### addEventListener
-- ***监听vscode中的文件切换、终端、内容变更、新增、删除等事件***
+- ***监听 vscode 中的文件切换、终端、内容变更、新增、删除等事件***
+
+### addEventListeners
+- ***监听 vscode 中的文件切换、终端、内容变更、新增、删除等事件***
 
 ### createTerminal
 - ***快速创建一个终端***
 
 ### createCompletionItem
-- ***生成registerCompletionItemProvider的提示内容***
+- ***生成 registerCompletionItemProvider 的提示内容***
 
 ### registerCompletionItemProvider
 - ***根据输入生成对应的提示***
@@ -41,16 +52,16 @@ description: 列举了所有的接口
 - ***获取当前文件的一个类型 javascriptreact | typescriptreact | vue 等***
 
 ### createProgress
-- ***创建一个vscode中的执行进度条***
+- ***创建一个 vscode 中的执行进度条***
 
 ### registerInlayHintsProvider
-- ***给出一个类似copilot的hint提示***
+- ***给出一个类似 copilot 的 hint 提示***
 
 ### getCopyText
 - ***读取粘贴板中的内容***
 
 ### setCopyText
-- 往粘贴板中塞入内容***
+- ***往粘贴板中塞入内容***
 
 ### updateText
 - ***修改文本内容***

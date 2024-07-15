@@ -3,6 +3,16 @@ title: 📖 示例
 description: 展示一些常用的示例
 ---
 
+  ### 注册插件
+  ```
+  export = createExtension((context) => {
+    const disposals = []
+
+    return disposals
+  }, () => {
+
+  })
+  ```
 
   ### 注册指令，需要在 package.json 中声明 右下角弹出提示
   ```
@@ -16,6 +26,13 @@ description: 展示一些常用的示例
   registerCommand('vscode-use.error', () => {
     message.error('Hello World!')
   })
+
+  // 注册多个指令
+  registerCommands([
+    'vscode-use.error', () => {
+      message.error('Hello World!')
+    }
+  ])
   ```
 
   ### 注册指令，需要在 package.json 中声明 打开百度
@@ -34,6 +51,11 @@ description: 展示一些常用的示例
   ### 监听 切换活动的文本编辑器
   ```
   addEventListener('activeText-change', (e) => {})
+
+  // 监听多个事件
+  addEventListeners([
+    'activeText-change', (e) => {}
+  ])
   ```
 
   ### 监听 登录状态变化

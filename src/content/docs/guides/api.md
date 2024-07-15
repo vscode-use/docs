@@ -4,17 +4,25 @@ description: All the interfaces are listed.
 ---
 
 
+### createExtension
+- ***Create Extension***
 ### registerCommand
 - ***Registration instructions***
+### registerCommands
+- ***Registration instructions***
 ### executeCommand
+- ***Trigger instructions***
+### executeCommands
 - ***Trigger instructions***
 ### getConfiguration
 - ***get workspace configuration***
 ### messag
-- ***pe:'info'|'error',message:string,buttons:['ok']}： ***Pop up message***
+- {type:'info'|'error',message:string,buttons:['ok']}： ***Pop up message***
 ### openFile
 - ***Open a file.***
 ### addEventListener
+- ***Listen to file switching, terminal, content change, add, delete and other events in vscode***
+### addEventListeners
 - ***Listen to file switching, terminal, content change, add, delete and other events in vscode***
 ### createTerminal
 - ***Quickly create a terminal***
@@ -78,11 +86,11 @@ description: All the interfaces are listed.
 - ***Get the local language environment***
 ### rename
 - ***Quickly rename files***
-### createDefinitionLocatio
+### createDefinitionLocation
 - ***Create jump address data after left-clicking after pressing option***
-### setStyl
+### setStyle
 - ***Add style to a certain area***
-### createStye
+### createStyle
 - ***Create Style***
 ### getActiveTextEdito
 - ***Get the currently activated editor***
@@ -90,7 +98,7 @@ description: All the interfaces are listed.
 - ***Get the keywords at the position***
 ### setCommandParam
 - ***Set the click command parameter of MarkdownString***
-### getOffsetFromPositio
+### getOffsetFromPosition
 - ***Get the offset from position***
 ### getRootPat
 - ***Get the root directory path of the project***
@@ -104,5 +112,5 @@ description: All the interfaces are listed.
 - ***Add style animation***
 ### createStyleAnimation
 - ***Add style animation group***
-### getWordRangeAtPositio
+### getWordRangeAtPosition
 - ***Get the area of ​​keywords for your location***
