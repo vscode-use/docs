@@ -1,1 +1,2 @@
-[docs](https://vscode-use-docs.netlify.app/)
+## vscode-use Docs
+- [online](https://vscode-use-docs.netlify.app/)
